@@ -19,7 +19,7 @@ $(document).ready(() => {
                 $(target).siblings('span')[0].classList.add('striked')
             } else if ($this.target.id == 'del') {
                 const delTarget = $($this.target)[0]
-                $($(delTarget).parents()[1]).html('') // Não é a melhor alterantiva pois ainda deixa li abertas no codigo sem conteudo
+                $(delTarget).parents('li').remove(); 
             } else {
             }
         })
